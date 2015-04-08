@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+ini_set("display_errors", 1);
+ini_set("track_errors", 1);
+ini_set("html_errors", 1);
+error_reporting(E_ALL);
+session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +23,7 @@ use Facebook\FacebookRedirectLoginHelper;
 
 const APPID = '1572855576323141';
 const APPSECRET = 'cc2b3626ebc9c1ebe60764c7d9762db0';
-$urlRedirect = 'http://localhost:8888/';
+$urlRedirect = 'https://fb-api-esgi.herokuapp.com/';
 
 FacebookSession::setDefaultApplication(APPID, APPSECRET);
 
